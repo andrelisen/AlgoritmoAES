@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone III"
 set_global_assignment -name DEVICE EP3C25F324C6
-set_global_assignment -name TOP_LEVEL_ENTITY AES_topo
+set_global_assignment -name TOP_LEVEL_ENTITY SubChave
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:43:23  OCTOBER 12, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION 13.0
@@ -52,11 +52,22 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda
 set_global_assignment -name VHDL_FILE AES_topo.vhd
 set_global_assignment -name VHDL_FILE register8bits.vhd
 set_global_assignment -name VHDL_FILE AddRound.vhd
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
 set_global_assignment -name SIMULATION_MODE FUNCTIONAL
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST ON -section_id eda_simulation
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/andre/Desktop/AlgoritmoAes/Waveform.vwf"
+set_global_assignment -name VHDL_FILE memoria_sbox.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE teste_sbox.vwf
+set_global_assignment -name VHDL_FILE MixColumns.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE teste_sll.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE teste_mix.vwf
+set_global_assignment -name VHDL_FILE SubBytes.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE teste_subBytes.vwf
+set_global_assignment -name VHDL_FILE ShiftRows.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE teste_shift.vwf
+set_global_assignment -name VHDL_FILE SubChave.vhd
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE teste_subchave.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE "C:/Users/andre/Documents/AlgoritmoAES/teste_subchave.vwf"

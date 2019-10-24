@@ -1,0 +1,13 @@
+-- Declaração da S-BOX
+
+entity memoria_sbox is
+	port( 
+	
+	);
+end entity;
+
+architecture hardwareSbox of memoria_sbox is
+
+begin
+
+end hardwareSbox;

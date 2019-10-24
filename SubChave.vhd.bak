@@ -1,0 +1,6 @@
+
+entity SubChave is
+	port(
+	
+	);
+end entity;

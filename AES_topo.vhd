@@ -3,83 +3,143 @@
 	library ieee;
 	use ieee.std_logic_1164.all;
 	
---Passo 1: criar a entidade topo com entradas, saídas e portas de depuração
 entity AES_topo is
 	port(
-		--Portas de entrada do texto
-			e0_t, e1_t, e2_t, e3_t, e4_t, e5_t, e6_t, e7_t, e8_t, e9_t, e10_t 	: in std_logic_vector(7 downto 0);
-			e11_t, e12_t, e13_t, e14_t, e15_t							  					: in std_logic_vector(7 downto 0);
-		--Portas de entrada da chave
-			e0_c, e1_c, e2_c, e3_c, e4_c, e5_c, e6_c, e7_c, e8_c, e9_c  			: in std_logic_vector(7 downto 0);
-			e10_c, e11_c, e12_c, e13_c, e14_c, e15_c					  		 			: in std_logic_vector(7 downto 0);
-		--Clock
-			clock 												   : in std_logic;
-		--Enable dos registradores: aqui cria um enable para cada "conj" que preciso setar em reg diferentes
-			En_inputs  											   	: in std_logic;
-			En_regAddRound											: in std_logic
-		--Portas de depuração
-	--	outReg0_t_view, outReg0_c_view	  : out std_logic_vector(7 downto 0); --ver o que tem no registrador da chave e do texto
-	--	outAddRound0_view					  : out std_logic_vector(7 downto 0);
-	--	outRegAdd0_view						  : out std_logic_vector(7 downto 0)
+		--Entrada do texto
+			registrador0_texto		:	in std_logic_vector(7 downto 0);
+			registrador1_texto		:	in std_logic_vector(7 downto 0);
+		--Entrada da chave
+			registrador0_chave		:	in std_logic_vector(7 downto 0);
+			registrador1_chave		:	in std_logic_vector(7 downto 0);
+		--Sinal de enable
+			Enable_registradoresA	:	in std_logic;
+			Enable_registradoresB	:	in std_logic;
+			Enable_add					:  in std_logic;
+		--Sinal de clock
+			clock							:	in std_logic;
+		--Sinais de depuração
+			--Quantas caixas eu vou ter? 
+			--Registrador 0 da chave
+			out_view_Registrador0_chave :	out std_logic_vector(7 downto 0);
+			out_view_Registrador1_chave :	out std_logic_vector(7 downto 0);
+			--Registrador 0 do texto
+			out_view_Registrador0_texto :	out std_logic_vector(7 downto 0);
+			out_view_Registrador1_texto :	out std_logic_vector(7 downto 0);
+			--	Add Round Key
+			out_view_Add  :	out std_logic_vector(7 downto 0);
+			out_view_Add1 :	out std_logic_vector(7 downto 0);
+			--Registrador 0 Add Round Key
+			out_view_Registrador0_Add	: out std_logic_vector(7 downto 0);
+			out_view_Registrador1_Add	: out std_logic_vector(7 downto 0)
 	);
 end entity;
 
 architecture hardwareTopo of AES_topo is
---Passo 2:Declaração dos sinais de cada porta de depuração 
---	signal outReg0_t_sg, outReg0_c_sg, outAddRound0_sg, outRegAdd0_sg	: std_logic_vector(7 downto 0);
-signal outReg0_t_sg, outReg0_c_sg, outAddRound0_sg, outRegAdd0_sg	: std_logic_vector(127 downto 0);
-	--signal e0_c : std_logic_vector(7 downto 0);
---Passo 3:Declaração de cada componente que "quero ver como quadradinho"
-	component register8bits is
-		port(	
-			clk		: in std_logic;
-			enable	: in std_logic;
-			d	      : in std_logic_vector(7 downto 0);
-			q			: out std_logic_vector(7 downto 0)	
-		);
-	end component;
-	component AddRound is
-		port(
-			a	:	in std_logic_vector(7 downto 0);
-			b	:	in std_logic_vector(7 downto 0);
-			resultado : out std_logic_vector(7 downto 0)
-		);
-	end component;
-	
---Passo 4: mapear cada componente a sua porta principal correspodente
 
+component register8bits is
+	port(
+		clk		: in std_logic;
+		enable	: in std_logic;
+		d	      : in std_logic_vector(7 downto 0);
+		q			: out std_logic_vector(7 downto 0)			
+	);
+end component;
+
+component AddRound is
+	port(
+		a	:	in std_logic_vector(7 downto 0);
+		b	:	in std_logic_vector(7 downto 0);
+		resultado : out std_logic_vector(7 downto 0)
+	);
+end component;
+
+--Sinais internos para cada porta de depuração
+signal out_Reg0Chave_sg, out_Reg0Texto_sg, out_Add_sg, out_Reg0Add_sg	:	std_logic_vector(7 downto 0);
+signal out_Reg1Chave_sg, out_Reg1Texto_sg, out_Add1_sg, out_Reg1Add_sg	:	std_logic_vector(7 downto 0);
 begin
 
-	R0_texto : register8bits
-		port map( 								--x vai receber 10, ou seja, x => 10
-			clk =>clock,
-			enable =>En_inputs,
-			d => e0_t,
-			q => outReg0_t_sg
-		);
-	R0_chave : register8bits
+--Quero criar as caixas para o sinal de enable A 
+
+--Primeiro quero criar o registrador 0 do texto
+
+	Reg0TXT	:	register8bits
 		port map(
-			clk => clock,
-			enable => En_inputs,
-			d => e0_c,
-			q => outReg0_c_sg
+			clk		=>	clock,	--porta
+			enable 	=> Enable_registradoresA, --porta
+			d			=>	registrador0_texto,	--porta
+			q			=>	out_Reg0Texto_sg	--sinal
 		);
-	Add0 : AddRound 
-		port map( 
-			a => outReg0_c_sg, 
-			b => outReg0_t_sg,
-			resultado => outAddRound0_sg
-		);
-	R0_add : register8bits
+--Agora vou declarar o registrador 0 da chave
+	Reg0CHAVE	:	register8bits
 		port map(
-			clk => clock,
-			enable => En_regAddRound,
-			d => outAddRound0_sg,
-			q => outRegAdd0_sg
+			clk		=> clock,	--porta
+			enable	=> Enable_registradoresA,	--porta
+			d			=>	registrador0_chave,	--porta
+			q			=> out_Reg0Chave_sg	--sinal
 		);
-	--Portas de visualização de cada resultado de cada quadradinho	
---		outReg0_t_view <= outReg0_t_sg;
---		outReg0_c_view <= outReg0_c_sg;
---		outAddRound0_view	<= outAddRound0_sg;
---		outRegAdd0_view	<= outRegAdd0_sg;
+--Agora quero fazer um AddRoundKey entre o Reg0Chave e Reg0Texto
+	Add0	: AddRound
+		port map(
+			a				=> out_Reg0Texto_sg,	--sinal
+			b				=>	out_Reg0Chave_sg,	--sinal
+			resultado	=> out_Add_sg		--sinal
+		);
+--Por fim quero ter um registrador especifico para guardar o resultado de add
+	Reg0ADD	:	register8bits
+		port map(
+			clk		=>	clock,	--porta
+			enable	=> Enable_add,	--porta
+			d			=>	out_Add_sg,	--sinal
+			q			=>	out_Reg0Add_sg	--sinal
+		);
+--Enviando sinais para as portas de depuração
+	out_view_Registrador0_chave	<=		out_Reg0Chave_sg;		
+	out_view_Registrador0_texto	<=		out_Reg0Texto_sg;
+	out_view_Add						<=		out_Add_sg;
+	out_view_Registrador0_Add		<=		out_Reg0Add_sg;
+	
+--------------------------------------------------------------------------------------------------
+	
+--Quero criar as caixas para o sinal de enable B
+
+--Primeiro quero criar o registrador 0 do texto
+
+	Reg1TXT	:	register8bits
+		port map(
+			clk		=>	clock,	--porta
+			enable 	=> Enable_registradoresB, --porta
+			d			=>	registrador1_texto,	--porta
+			q			=>	out_Reg1Texto_sg	--sinal
+		);
+--Agora vou declarar o registrador 0 da chave
+	Reg1CHAVE	:	register8bits
+		port map(
+			clk		=> clock,	--porta
+			enable	=> Enable_registradoresB,	--porta
+			d			=>	registrador1_chave,	--porta
+			q			=> out_Reg1Chave_sg	--sinal
+		);
+--Agora quero fazer um AddRoundKey entre o Reg0Chave e Reg0Texto
+	Add1	: AddRound
+		port map(
+			a				=> out_Reg1Texto_sg,	--sinal
+			b				=>	out_Reg1Chave_sg,	--sinal
+			resultado	=> out_Add1_sg		--sinal
+		);
+--Por fim quero ter um registrador especifico para guardar o resultado de add
+	Reg1ADD	:	register8bits
+		port map(
+			clk		=>	clock,	--porta
+			enable	=> Enable_add,	--porta
+			d			=>	out_Add1_sg,	--sinal
+			q			=>	out_Reg1Add_sg	--sinal
+		);
+--Enviando sinais para as portas de depuração
+	out_view_Registrador1_chave	<=		out_Reg1Chave_sg;		
+	out_view_Registrador1_texto	<=		out_Reg1Texto_sg;
+	out_view_Add1						<=		out_Add1_sg;
+	out_view_Registrador1_Add		<=		out_Reg1Add_sg;
+	
+	
+	
 end hardwareTopo;
