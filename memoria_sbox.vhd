@@ -114,7 +114,7 @@ begin
 	tabela_sbox(82) <= X"00"; --52
 	tabela_sbox(83) <= X"ed"; --53
 	tabela_sbox(84) <= X"20"; --54
-	tabela_sbox(85) <= X"dc"; --55
+	tabela_sbox(85) <= X"fc"; --55
 	tabela_sbox(86) <= X"b1"; --56
 	tabela_sbox(87) <= X"5b"; --57
 	tabela_sbox(88) <= X"6a"; --58

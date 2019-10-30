@@ -1,8 +1,0 @@
--- Código do Mix Columns
-
-entity MixColumns is
-	port(
-		a	:	in std_logic_vector(7 downto 0);
-		b	:	out std_logic_vector(7 downto 0)
-	);
-end entity;

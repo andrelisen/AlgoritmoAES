@@ -1,0 +1,459 @@
+
+	library ieee;
+	use ieee.std_logic_1164.all;
+	
+entity tb_AES is
+end entity;
+	
+architecture hardware of tb_AES is
+
+component AES is
+	port(
+		--Entrada do texto
+			entrada0		:	in std_logic_vector(7 downto 0);
+			entrada1		:	in std_logic_vector(7 downto 0);
+			entrada2		:	in std_logic_vector(7 downto 0);
+			entrada3		:	in std_logic_vector(7 downto 0);
+			entrada4		:	in std_logic_vector(7 downto 0);
+			entrada5		:	in std_logic_vector(7 downto 0);
+			entrada6		:	in std_logic_vector(7 downto 0);
+			entrada7		:	in std_logic_vector(7 downto 0);
+		--Sinal de enable
+			Enable_registradoresA	:	in std_logic;	--Inicializa 8 registradores
+			Enable_registradoresB	:	in std_logic;	--Inicializa 8 registradores
+			Enable_registradoresC	:	in std_logic;	--Inicializa 8 registradores
+			Enable_registradoresD	:	in std_logic;	--Inicializa 8 registradores
+			Enable_Add 					:	in std_logic;
+			Enable_SubBytes			:  in std_logic;
+			Enable_ShiftRows			:  in std_logic;
+			Enable_Mix					:  in std_logic;
+			Enable_SubChave			:  in std_logic;
+		--Seletores
+			Sel_EntradaAddTxt 		: in std_logic_vector(1 downto 0); -- entrada mux add txt
+			Sel_EntradaAddKey 		: in std_logic;						  -- entrada mux add sub chave
+			Sel_EntradaSubChave 		: in std_logic;
+		--Sinal de clock
+			clock							:	in std_logic;
+		--Sinal de depuracao
+			out0Add_view, out1Add_view, out2Add_view, out3Add_view, out4Add_view, out5Add_view, out6Add_view, out7Add_view : out std_logic_vector(7 downto 0);
+			out8Add_view, out9Add_view, out10Add_view, out11Add_view, out12Add_view, out13Add_view, out14Add_view, out15Add_view : out std_logic_vector(7 downto 0)
+			
+			out0mix_view, out1mix_view, out2mix_view, out3mix_view, out4mix_view, out5mix_view, out6mix_view, out7mix_view : out std_logic_vector(7 downto 0);
+			out8mix_view, out9mix_view, out10mix_view, out11mix_view, out12mix_view, out13mix_view, out14mix_view, out15mix_view : out std_logic_vector(7 downto 0);
+	
+			out0Chave_view, out1Chave_view, out2Chave_view, out3Chave_view, out4Chave_view, out5Chave_view, out6Chave_view, out7Chave_view : out std_logic_vector(7 downto 0);
+			out8Chave_view, out9Chave_view, out10Chave_view, out11Chave_view, out12Chave_view, out13Chave_view, out14Chave_view, out15Chave_view : out std_logic_vector(7 downto 0)
+	
+	);
+end component;
+
+	signal e0, e1, e2, e3, e4, e5, e6, e7 : std_logic_vector(7 downto 0) := "00000000";
+	signal ea, eb, ec, ed, eadd, esub, eshift, emix, echave : std_logic := '0';
+	signal sel_addtxt : std_logic_vector(1 downto 0) := "00";
+	signal sel_addkey, sel_entradasub : std_logic := '0';
+	signal clk : std_logic := '0';
+	signal out0, out1, out2, out3, out4, out5, out6, out7, out8, out9, out10,out11 : std_logic_vector(7 downto 0) := "00000000";
+	signal out12, out13, out14, out15 : std_logic_vector(7 downto 0) := "00000000";
+	signal outc0, outc1, outc2, outc3, outc4, outc5, outc6, outc7, outc8, outc9, outc10,outc11 : std_logic_vector(7 downto 0) := "00000000";
+	signal outc12, outc13, outc14, outc15 : std_logic_vector(7 downto 0) := "00000000";
+	signal outm0, outm1, outm2, outm3, outm4, outm5, outm6, outm7, outm8, outm9, outm10,outm11 : std_logic_vector(7 downto 0) := "00000000";
+	signal outm12, outm13, outm14, outm15 : std_logic_vector(7 downto 0) := "00000000";
+
+	
+begin
+
+
+	instancia_topo : AES	
+		port map(
+			entrada0 => e0,
+			entrada1 => e1,
+			entrada2 => e2,
+			entrada3 => e3,
+			entrada4 => e4,
+			entrada5 => e5,
+			entrada6 => e6,
+			entrada7 => e7,
+			Enable_registradoresA => ea,
+			Enable_registradoresB => eb,
+			Enable_registradoresC => ec,
+			Enable_registradoresD  => ed,
+			Enable_Add => eadd,
+			Enable_SubBytes	 => esub,
+			Enable_ShiftRows	  => eshift,		
+			Enable_Mix			 => emix,		
+			Enable_SubChave	 => echave,	 	
+			Sel_EntradaAddTxt   => sel_addtxt,		
+			Sel_EntradaAddKey => sel_addkey,	
+			Sel_EntradaSubChave 	=> sel_entradasub,
+			clock					=> clk,		
+			out0Add_view => out0,
+			out1Add_view => out1,
+			out2Add_view => out2,
+			out3Add_view => out3,
+			out4Add_view => out4,
+			out5Add_view => out5,
+			out6Add_view => out6,
+			out7Add_view => out7,
+			out8Add_view => out8,
+			out9Add_view => out9,
+			out10Add_view => out10,
+			out11Add_view => out11,
+			out12Add_view => out12,
+			out13Add_view => out13,
+			out14Add_view => out14,
+			out15Add_view => out15,
+			out0mix_view => outm0, 
+			out1mix_view => outm1,
+			out2mix_view => outm2, 
+			out3mix_view => outm3, 
+			out4mix_view => outm4, 
+			out5mix_view => outm5, 
+			out6mix_view => outm6, 
+			out7mix_view => outm7,
+			out8mix_view => outm8, 
+			out9mix_view => outm9, 
+			out10mix_view => outm10, 
+			out11mix_view => outm11, 
+			out12mix_view => outm12, 
+			out13mix_view => outm13, 
+			out14mix_view => outm14, 
+			out15mix_view => outm15,
+			out0Chave_view => outc0,
+			out1Chave_view => outc1,
+			out2Chave_view => outc2, 
+			out3Chave_view => outc3, 
+			out4Chave_view => outc4, 
+			out5Chave_view => outc5, 
+			out6Chave_view => outc6, 
+			out7Chave_view => outc7,
+			out8Chave_view => outc8,
+			out9Chave_view => outc9,
+			out10Chave_view => outc10,
+			out11Chave_view => outc11,
+			out12Chave_view => outc12,
+			out13Chave_view => outc13,
+			out14Chave_view => outc14,
+			out15Chave_view => outc15
+		);
+
+		process
+		begin
+		--Inicializa registradores--
+		wait for 25 ns;
+		e0 <= X"43";
+		e1 <= X"72";
+		e2 <= X"79";
+		e3 <= X"70";
+		e4 <= X"74";
+		e5 <= X"6f";
+		e6 <= X"20"; 
+		e7 <= X"50";
+		clk <='1';
+		ea <='1';
+		wait for 25 ns;
+		clk <='0';
+		ea<='0';
+		wait for 25 ns;
+		e0 <= X"72";
+		e1 <= X"6F";
+		e2 <= X"63";
+		e3 <= X"65";
+		e4 <= X"73";
+		e5 <= X"73";
+		e6 <= X"6F";
+		e7 <= X"72";
+		eb  <='1';
+		clk <='1';
+		wait for 25 ns;
+		eb <= '0';
+		clk <= '0';
+		wait for 25 ns;
+		e0 <=	X"2B";
+		e1 <=	X"7E";
+		e2 <=	X"15";
+		e3 <=	X"16";
+		e4 <=	X"28";
+		e5 <=	X"AE";
+		e6 <=	X"D2";
+		e7 <=	X"A6";
+		ec <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		ec <= '0';
+		clk <= '0';
+		wait for 25 ns;
+		e0 <= X"ab";
+		e1 <= X"f7";
+		e2 <= X"15";
+		e3 <= X"88";
+		e4 <= X"09";
+		e5 <= X"cf";
+		e6 <= X"4f";
+		e7 <= X"3c";
+		ed <= '1';
+		clk <='1';
+		wait for 25 ns;
+		ed <='0';
+		clk<='0';
+		--Fim da inicializacao dos registradores-- =8
+		
+		--Add Round Key--
+		wait for 25 ns;
+		sel_addtxt <= "00"; --Texto inicializado
+		sel_addkey <= '1'; --Inicial
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		eadd <= '1';
+		clk <='1';
+		wait for 25 ns;
+		eadd <= '0';
+		clk <= '0';
+		
+		-- Fim do calculo do Add Round Key-- = 4
+		
+		--Calculo da Sub Chave 1--
+		wait for 25 ns;
+		sel_entradasub <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		echave <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		echave <= '0';
+		clk <= '0';
+		--Fim do calculo da sub chave 1 usando o que vem da chave inicial-- =4
+		
+		--Sub bytes
+		wait for 25 ns;
+		esub <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		esub<='0';
+		--Fim do Sub Bytes-- = 2
+		
+		--Shift Rows 
+		wait for 25 ns;
+		eshift <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		eshift <= '0';
+		clk <= '0';
+		-- Fim do Shift Rows-- =2
+		
+		--Mix Columns
+		wait for 25 ns;
+		emix <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		emix <= '0';
+		clk <= '0';
+		
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		-- Fim do Mix Columns -- = 25
+		
+		--Add Round Key com valor que vem do Mix Columns--
+		wait for 25 ns;
+		sel_addtxt <= "01"; --Texto do mix
+		sel_addkey <= '0'; --calculado
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		eadd <= '1';
+		clk <='1';
+		wait for 25 ns;
+		eadd <= '0';
+		clk <= '0';
+		--Fim do Add Round Key-- =4
+		
+		--Calculo da Sub Chave 2--
+		wait for 25 ns;
+		sel_entradasub <= '0';
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		echave <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		echave <= '0';
+		clk <= '0';
+		--Fim do calculo da sub chave 2 usando o que vem da chave inicial-- =4
+		
+		--Sub bytes
+		wait for 25 ns;
+		esub <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		esub<='0';
+		--Fim do Sub Bytes-- = 2
+		
+		--Shift Rows 
+		wait for 25 ns;
+		eshift <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		eshift <= '0';
+		clk <= '0';
+		-- Fim do Shift Rows-- =2
+		
+		--Mix Columns
+		wait for 25 ns;
+		emix <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		emix <= '0';
+		clk <= '0';
+		
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+				wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+				wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+				wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+				wait for 25 ns;
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		-- Fim do Mix Columns -- = 25
+		
+		--Add Round Key com valor que vem do Mix Columns--
+		wait for 25 ns;
+		sel_addtxt <= "01"; --Texto do mix
+		sel_addkey <= '0'; --calculado
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		eadd <= '1';
+		clk <='1';
+		wait for 25 ns;
+		eadd <= '0';
+		clk <= '0';
+		--Fim do Add Round Key-- =4
+		
+		--Calculo da Sub Chave 3--
+		wait for 25 ns;
+		sel_entradasub <= '0';
+		clk <= '1';
+		wait for 25 ns;
+		clk <= '0';
+		wait for 25 ns;
+		echave <= '1';
+		clk <= '1';
+		wait for 25 ns;
+		echave <= '0';
+		clk <= '0';
+		--Fim do calculo da sub chave 3 usando o que vem da chave inicial-- =4
+		wait;
+		end process;
+		
+		
+end hardware;

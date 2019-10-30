@@ -18,6 +18,7 @@ entity SubChave_vlg_sample_tst is
         c13             : in     vl_logic_vector(7 downto 0);
         c14             : in     vl_logic_vector(7 downto 0);
         c15             : in     vl_logic_vector(7 downto 0);
+        seletor         : in     vl_logic_vector(3 downto 0);
         sampler_tx      : out    vl_logic
     );
 end SubChave_vlg_sample_tst;

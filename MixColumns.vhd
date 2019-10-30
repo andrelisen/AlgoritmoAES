@@ -29,7 +29,7 @@ begin
 --	b<=std_logic_vector(unsigned(a) sll 1);
 --Temos uma propriedade em que 03 * ei,j pode ser escrita como 2 * ei,j xor ei,j
 --Para a primeira coluna de state [e0:e3], temos a primeira linha da matriz [m0,m4,m8,m12]
-	process(e0, e1, e2, e3)
+	process(e0, e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12, e13, e14, e15)
 		variable calc : std_logic_vector(7 downto 0);
 		variable result : std_logic_vector(7 downto 0) := "00000000";
 		variable s0_v, s1_v, s2_v, s3_v : std_logic_vector(7 downto 0) := "00000000";

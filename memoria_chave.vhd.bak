@@ -1,3 +1,0 @@
--- Memória da chave de criptografia inicial 
--- É uma LUT como o exemplo do prof. Fábio
--- A memória é inicializada com a chave de criptografia inicial e depois os cálculos são feitos e guardados em registradores

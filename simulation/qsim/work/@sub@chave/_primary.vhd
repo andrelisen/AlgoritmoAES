@@ -18,6 +18,7 @@ entity SubChave is
         c13             : in     vl_logic_vector(7 downto 0);
         c14             : in     vl_logic_vector(7 downto 0);
         c15             : in     vl_logic_vector(7 downto 0);
+        seletor         : in     vl_logic_vector(3 downto 0);
         n0              : out    vl_logic_vector(7 downto 0);
         n1              : out    vl_logic_vector(7 downto 0);
         n2              : out    vl_logic_vector(7 downto 0);
