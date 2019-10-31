@@ -1,0 +1,44 @@
+library verilog;
+use verilog.vl_types.all;
+entity AES is
+    port(
+        entrada0        : in     vl_logic_vector(7 downto 0);
+        entrada1        : in     vl_logic_vector(7 downto 0);
+        entrada2        : in     vl_logic_vector(7 downto 0);
+        entrada3        : in     vl_logic_vector(7 downto 0);
+        entrada4        : in     vl_logic_vector(7 downto 0);
+        entrada5        : in     vl_logic_vector(7 downto 0);
+        entrada6        : in     vl_logic_vector(7 downto 0);
+        entrada7        : in     vl_logic_vector(7 downto 0);
+        Enable_registradoresA: in     vl_logic;
+        Enable_registradoresB: in     vl_logic;
+        Enable_registradoresC: in     vl_logic;
+        Enable_registradoresD: in     vl_logic;
+        Enable_Add      : in     vl_logic;
+        Enable_SubBytes : in     vl_logic;
+        Enable_ShiftRows: in     vl_logic;
+        Enable_Mix      : in     vl_logic;
+        Enable_SubChave : in     vl_logic;
+        Sel_EntradaAddTxt: in     vl_logic_vector(1 downto 0);
+        Sel_EntradaAddKey: in     vl_logic;
+        Sel_EntradaSubChave: in     vl_logic;
+        Sel_rcon        : in     vl_logic_vector(3 downto 0);
+        clock           : in     vl_logic;
+        out0Add_view    : out    vl_logic_vector(7 downto 0);
+        out1Add_view    : out    vl_logic_vector(7 downto 0);
+        out2Add_view    : out    vl_logic_vector(7 downto 0);
+        out3Add_view    : out    vl_logic_vector(7 downto 0);
+        out4Add_view    : out    vl_logic_vector(7 downto 0);
+        out5Add_view    : out    vl_logic_vector(7 downto 0);
+        out6Add_view    : out    vl_logic_vector(7 downto 0);
+        out7Add_view    : out    vl_logic_vector(7 downto 0);
+        out8Add_view    : out    vl_logic_vector(7 downto 0);
+        out9Add_view    : out    vl_logic_vector(7 downto 0);
+        out10Add_view   : out    vl_logic_vector(7 downto 0);
+        out11Add_view   : out    vl_logic_vector(7 downto 0);
+        out12Add_view   : out    vl_logic_vector(7 downto 0);
+        out13Add_view   : out    vl_logic_vector(7 downto 0);
+        out14Add_view   : out    vl_logic_vector(7 downto 0);
+        out15Add_view   : out    vl_logic_vector(7 downto 0)
+    );
+end AES;

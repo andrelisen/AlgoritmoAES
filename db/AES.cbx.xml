@@ -1,5 +1,21 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="AES">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e0_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_ke01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e13_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_8g01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e4_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_oe01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e8_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_se01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e10_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_5g01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e14_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_9g01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e1_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_le01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e5_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_pe01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e9_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_te01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e11_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_6g01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e15_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_ag01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e2_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_me01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e6_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_qe01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e12_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_7g01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e3_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_ne01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Conecta_topo|AES:PO|SubBytes:SubB|memoria_sbox:e7_q|altsyncram:Mux7_rtl_0" CBX_FILE_NAME="altsyncram_re01.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

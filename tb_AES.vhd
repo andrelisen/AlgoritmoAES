@@ -106,6 +106,7 @@ end component;
 		begin
 		
 		--Inicializa registradores-- 12*40ns + 5 ns +75 ns
+		--estado 1
 		wait for 5 ns;
 		e0 <= X"6b";
 		e1 <= X"c1";
@@ -126,6 +127,7 @@ end component;
 		e5 <=	"00000000";
 		e6 <=	"00000000";
 		e7 <=	"00000000";
+		--estado 2
 		wait for 40 ns;
 		e0 <= X"e9";
 		e1 <= X"3d";
@@ -146,6 +148,7 @@ end component;
 		e5 <=	"00000000";
 		e6 <=	"00000000";
 		e7 <=	"00000000";
+		--estado 3
 		wait for 40 ns;
 		e0 <=	X"2b";
 		e1 <=	X"7e";
@@ -166,6 +169,7 @@ end component;
 		e5 <=	"00000000";
 		e6 <=	"00000000";
 		e7 <=	"00000000";
+		--estado 4
 		wait for 40 ns;
 		e0 <= X"ab";
 		e1 <= X"f7";
@@ -188,6 +192,7 @@ end component;
 		e7 <=	"00000000";
 	--Fim da inicializacao dos reg--
 	
+	--estado 5
 	--Calculo do Add Round Key com texto e chave inicial --
 		wait for 40 ns;
 		sel_addtxt <= "00";
@@ -208,7 +213,7 @@ end component;
 		wait for 40 ns;
 		echave <= '0';
 	-- Fim do calculo da sub chave utilizando a chave inicial como entrada
-		
+	--estado 6	
 			--RODADA 1--
 	--Calculo Sub Bytes--
 		wait for 40 ns;
@@ -251,6 +256,7 @@ end component;
 		wait for 40 ns;
 		echave <= '0';
 	-- Fim do calculo da sub chave utilizando a chave calculada como entrada
+	--estado 7
 			--RODADA 2--
 	--Calculo Sub Bytes--
 		wait for 40 ns;
@@ -293,6 +299,7 @@ end component;
 		wait for 40 ns;
 		echave <= '0';
 	-- Fim do calculo da sub chave utilizando a chave calculada como entrada
+	--estado 8
 			--RODADA 3--
 		--Calculo Sub Bytes--
 		wait for 40 ns;
@@ -335,6 +342,7 @@ end component;
 		wait for 40 ns;
 		echave <= '0';
 	-- Fim do calculo da sub chave utilizando a chave calculada como entrada
+	--estado 9
 			--RODADA 4--
 		--Calculo Sub Bytes--
 		wait for 40 ns;
@@ -377,6 +385,7 @@ end component;
 		wait for 40 ns;
 		echave <= '0';
 	-- Fim do calculo da sub chave utilizando a chave calculada como entrada
+	--estado 10
 			--RODADA 5--
 		--Calculo Sub Bytes--
 		wait for 40 ns;
@@ -419,6 +428,7 @@ end component;
 		wait for 40 ns;
 		echave <= '0';
 	-- Fim do calculo da sub chave utilizando a chave calculada como entrada
+	--estado 11
 			--RODADA 6--
 		--Calculo Sub Bytes--
 		wait for 40 ns;
@@ -461,6 +471,7 @@ end component;
 		wait for 40 ns;
 		echave <= '0';
 	-- Fim do calculo da sub chave utilizando a chave calculada como entrada
+	--estado 12
 			--RODADA 7--
 		--Calculo Sub Bytes--
 		wait for 40 ns;
@@ -503,6 +514,7 @@ end component;
 		wait for 40 ns;
 		echave <= '0';
 	-- Fim do calculo da sub chave utilizando a chave calculada como entrada
+	--estado 13
 			--RODADA 8--
 		--Calculo Sub Bytes--
 		wait for 40 ns;
@@ -545,6 +557,7 @@ end component;
 		wait for 40 ns;
 		echave <= '0';
 	-- Fim do calculo da sub chave utilizando a chave calculada como entrada
+	--estado 14
 			--RODADA 9--
 	--Calculo Sub Bytes--
 		wait for 40 ns;
@@ -587,7 +600,7 @@ end component;
 		wait for 40 ns;
 		echave <= '0';
 	-- Fim do calculo da sub chave utilizando a chave calculada como entrada
-
+		--estado 15
 		--RODADA 10--  7*40ns
 		
 		--Calculo Sub Bytes--

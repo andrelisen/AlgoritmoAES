@@ -15,7 +15,7 @@ L6
 V`QCA<n3L_mi7c^1K_5cb]3
 Z6 OV;C;10.1d;51
 32
-Z7 !s108 1572399959.636000
+Z7 !s108 1572465122.775000
 Z8 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/AddRound.vhd|
 Z9 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/AddRound.vhd|
 Z10 o-work work -2002 -explicit -O0
@@ -39,7 +39,7 @@ R11
 !s100 `O=<PZC^dQTf6=@MEOTlJ3
 !i10b 1
 Eaes
-Z12 w1572399950
+Z12 w1572464910
 R1
 R2
 R3
@@ -50,20 +50,20 @@ L5
 VXP6i;KkUm402Xkm8UkBaI2
 R6
 32
-Z15 !s108 1572399960.109000
+Z15 !s108 1572465123.025000
 Z16 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/AES.vhd|
 Z17 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/AES.vhd|
 R10
 R11
-!s100 gX<zd6VLc0<91?1KJibX;0
+!s100 nH:c:K3W:nh?hN^9R^8z>3
 !i10b 1
 Aimplementa
 R1
 R2
 DEx4 work 3 aes 0 22 XP6i;KkUm402Xkm8UkBaI2
-l181
-L41
-VAXAH^XElK_^JhYR>93Nmb2
+l179
+L39
+Vc55C0cCQ<LH7@zhbBlm?X0
 R6
 32
 R15
@@ -71,7 +71,7 @@ R16
 R17
 R10
 R11
-!s100 k<cUHUAQJzLi>CG[Rc]lg3
+!s100 Jae_A8cmfL21YH_=Vhcke3
 !i10b 1
 Ebinary_counter
 Z18 w1572391144
@@ -161,7 +161,7 @@ L7
 VPAHbD=^NgFfzb>l>3z4lM3
 R6
 32
-Z36 !s108 1572399960.512000
+Z36 !s108 1572465123.264000
 Z37 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/memoria_sbox.vhd|
 Z38 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/memoria_sbox.vhd|
 R10
@@ -199,7 +199,7 @@ L6
 Vi1zXb`>]]hKObOc]hF]S_0
 R6
 32
-Z42 !s108 1572399960.893000
+Z42 !s108 1572465123.507000
 Z43 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/MixColumns.vhd|
 Z44 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/MixColumns.vhd|
 R10
@@ -235,7 +235,7 @@ L6
 V[P^VPn7SfWjGoodGXG6>K1
 R6
 32
-Z48 !s108 1572399961.207000
+Z48 !s108 1572465123.767000
 Z49 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/Mux2p1.vhd|
 Z50 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/Mux2p1.vhd|
 R10
@@ -270,7 +270,7 @@ L6
 VEOjIfilzj@b^eAoL=gFJo1
 R6
 32
-Z54 !s108 1572399961.694000
+Z54 !s108 1572465124.095000
 Z55 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/Mux4p1.vhd|
 Z56 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/Mux4p1.vhd|
 R10
@@ -303,46 +303,46 @@ Z59 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/MuxSub.vhd
 l0
 L6
 VB8[QB9<gk:ReGf[DO:TN=2
+!s100 9zcaUMG^0:gFF41mHe90D1
 R6
 32
-Z60 !s108 1572399964.822000
+!i10b 1
+Z60 !s108 1572465125.744000
 Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/MuxSub.vhd|
 Z62 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/MuxSub.vhd|
 R10
 R11
-!s100 9zcaUMG^0:gFF41mHe90D1
-!i10b 1
 Ahardware
 R1
 R2
-DEx4 work 6 muxsub 0 22 B8[QB9<gk:ReGf[DO:TN=2
+Z63 DEx4 work 6 muxsub 0 22 B8[QB9<gk:ReGf[DO:TN=2
 l26
 L13
-Vgg6FXA;E5o;GPc1:o?z0V0
-!s100 QbYc@ShbS>8o9dGeZobV01
+Z64 Vgg6FXA;E5o;GPc1:o?z0V0
+Z65 !s100 QbYc@ShbS>8o9dGeZobV01
 R6
 32
+!i10b 1
 R60
 R61
 R62
 R10
 R11
-!i10b 1
 Eregister8bits
-Z63 w1572214448
+Z66 w1572214448
 R1
 R2
 R3
-Z64 8C:/Users/andre/Desktop/Algoritmo AES em VHDL/register8bits.vhd
-Z65 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/register8bits.vhd
+Z67 8C:/Users/andre/Desktop/Algoritmo AES em VHDL/register8bits.vhd
+Z68 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/register8bits.vhd
 l0
 L6
 VVZ:GfN6Y^[FWLLOV<6RFD0
 R6
 32
-Z66 !s108 1572399962.323000
-Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/register8bits.vhd|
-Z68 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/register8bits.vhd|
+Z69 !s108 1572465124.435000
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/register8bits.vhd|
+Z71 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/register8bits.vhd|
 R10
 R11
 !s100 [FY4mUdnO?H=h1bVTidXY3
@@ -356,29 +356,29 @@ L15
 VfZGh84;ej>5;eXQS;TcF_3
 R6
 32
-R66
-R67
-R68
+R69
+R70
+R71
 R10
 R11
 !s100 eiEE4@hgV3TJRW<FSQSL<1
 !i10b 1
 Eshiftrows
-Z69 w1572214362
+Z72 w1572214362
 R19
 R1
 R2
 R3
-Z70 8C:/Users/andre/Desktop/Algoritmo AES em VHDL/ShiftRows.vhd
-Z71 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/ShiftRows.vhd
+Z73 8C:/Users/andre/Desktop/Algoritmo AES em VHDL/ShiftRows.vhd
+Z74 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/ShiftRows.vhd
 l0
 L5
 VP7D0Lii@DCG_O8=PV5dMQ0
 R6
 32
-Z72 !s108 1572399962.858000
-Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/ShiftRows.vhd|
-Z74 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/ShiftRows.vhd|
+Z75 !s108 1572465124.751000
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/ShiftRows.vhd|
+Z77 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/ShiftRows.vhd|
 R10
 R11
 !s100 n<XEfXj@[MSD<cAN9j]`M3
@@ -393,29 +393,29 @@ L20
 VNVR=g38<BN?GeO=n1R83@3
 R6
 32
-R72
-R73
-R74
+R75
+R76
+R77
 R10
 R11
 !s100 :_?Qm`ZD3O;X`6h6Xe_iU0
 !i10b 1
 Esubbytes
-Z75 w1572214375
+Z78 w1572214375
 R19
 R1
 R2
 R3
-Z76 8C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubBytes.vhd
-Z77 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/SubBytes.vhd
+Z79 8C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubBytes.vhd
+Z80 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/SubBytes.vhd
 l0
 L5
 VRGo>Rzge1Az1?P6maFK0N3
 R6
 32
-Z78 !s108 1572399963.286000
-Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubBytes.vhd|
-Z80 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubBytes.vhd|
+Z81 !s108 1572465124.984000
+Z82 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubBytes.vhd|
+Z83 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubBytes.vhd|
 R10
 R11
 !s100 eg[RKQ2T1_n;<j8AdnK6e1
@@ -430,29 +430,29 @@ L20
 VQ^`S]W>5lH5OmGceW]Ud=2
 R6
 32
-R78
-R79
-R80
+R81
+R82
+R83
 R10
 R11
 !s100 `=XU[0T7U_e;D]Q6@:I6S0
 !i10b 1
 Esubchave
-Z81 w1572395269
+Z84 w1572395269
 R19
 R1
 R2
 R3
-Z82 8C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubChave.vhd
-Z83 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/SubChave.vhd
+Z85 8C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubChave.vhd
+Z86 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/SubChave.vhd
 l0
 L5
 VemB[iU9le0ZV>J0@B1Mff2
 R6
 32
-Z84 !s108 1572399963.676000
-Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubChave.vhd|
-Z86 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubChave.vhd|
+Z87 !s108 1572465125.234000
+Z88 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubChave.vhd|
+Z89 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/SubChave.vhd|
 R10
 R11
 !s100 gCC?0HfeCCmjFLdb8EaOO2
@@ -467,45 +467,45 @@ L21
 VUHo`T7_@Wh;KSm>LYFJ_b0
 R6
 32
-R84
-R85
-R86
+R87
+R88
+R89
 R10
 R11
 !s100 2jjAzK24X8fodjNWmdSGR1
 !i10b 1
 Etb_aes
-Z87 w1572400159
+Z90 w1572454528
 R1
 R2
 R3
-Z88 8C:/Users/andre/Desktop/Algoritmo AES em VHDL/tb_AES.vhd
-Z89 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/tb_AES.vhd
+Z91 8C:/Users/andre/Desktop/Algoritmo AES em VHDL/tb_AES.vhd
+Z92 FC:/Users/andre/Desktop/Algoritmo AES em VHDL/tb_AES.vhd
 l0
 L5
 VcLJ?0bW<lG`_WiBdd?R[<2
-!s100 4:>NoIGDN=9DGJH6WZ@HS0
 R6
 32
-!i10b 1
-Z90 !s108 1572400290.555000
-Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/tb_AES.vhd|
-Z92 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/tb_AES.vhd|
+Z93 !s108 1572465125.455000
+Z94 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/Users/andre/Desktop/Algoritmo AES em VHDL/tb_AES.vhd|
+Z95 !s107 C:/Users/andre/Desktop/Algoritmo AES em VHDL/tb_AES.vhd|
 R10
 R11
+!s100 4:>NoIGDN=9DGJH6WZ@HS0
+!i10b 1
 Ahardware
 R1
 R2
-Z93 DEx4 work 6 tb_aes 0 22 cLJ?0bW<lG`_WiBdd?R[<2
+DEx4 work 6 tb_aes 0 22 cLJ?0bW<lG`_WiBdd?R[<2
 l57
 L8
 VeK[Q9D=ZXULlH4CgORPT]1
-!s100 WEHM=YLc=^acZ=nE>]Ree2
 R6
 32
-!i10b 1
-R90
-R91
-R92
+R93
+R94
+R95
 R10
 R11
+!s100 <e]`028oEn@A@G];K>J0z1
+!i10b 1

@@ -2,25 +2,36 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module SubChave
+# -- Compiling module Conecta_topo
 # 
 # Top level modules:
-# 	SubChave
+# 	Conecta_topo
 # Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
-# -- Compiling module SubChave_vlg_sample_tst
-# -- Compiling module SubChave_vlg_check_tst
-# -- Compiling module SubChave_vlg_vec_tst
+# -- Compiling module Conecta_topo_vlg_sample_tst
+# -- Compiling module Conecta_topo_vlg_check_tst
+# -- Compiling module Conecta_topo_vlg_vec_tst
 # 
 # Top level modules:
-# 	SubChave_vlg_vec_tst
-# vsim -L cycloneiii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.SubChave_vlg_vec_tst 
-# Loading work.SubChave_vlg_vec_tst
-# Loading work.SubChave
+# 	Conecta_topo_vlg_vec_tst
+# vsim -L cycloneiii_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.Conecta_topo_vlg_vec_tst 
+# Loading work.Conecta_topo_vlg_vec_tst
+# Loading work.Conecta_topo
+# Loading cycloneiii_ver.cycloneiii_ram_block
+# Loading cycloneiii_ver.cycloneiii_ram_register
+# Loading cycloneiii_ver.cycloneiii_ram_pulse_generator
+# Loading altera_ver.dffeas
 # Loading cycloneiii_ver.cycloneiii_lcell_comb
-# Loading cycloneiii_ver.cycloneiii_io_ibuf
 # Loading cycloneiii_ver.cycloneiii_io_obuf
-# Loading work.SubChave_vlg_sample_tst
-# Loading work.SubChave_vlg_check_tst
+# Loading cycloneiii_ver.cycloneiii_io_ibuf
+# Loading cycloneiii_ver.cycloneiii_clkctrl
+# Loading cycloneiii_ver.cycloneiii_mux41
+# Loading cycloneiii_ver.cycloneiii_ena_reg
+# Loading work.Conecta_topo_vlg_sample_tst
+# Loading work.Conecta_topo_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim Altera version. Expect performance to be adversely affected.
 # Simulation passed !
-# ** Note: $finish    : AES.vt(2585)
-#    Time: 1 us  Iteration: 0  Instance: /SubChave_vlg_vec_tst/tb_out
+# ** Note: $finish    : AES.vt(2571)
+#    Time: 1 us  Iteration: 0  Instance: /Conecta_topo_vlg_vec_tst/tb_out

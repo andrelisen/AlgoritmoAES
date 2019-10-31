@@ -23,8 +23,6 @@ entity AES is
 			Enable_ShiftRows			:  in std_logic;
 			Enable_Mix					:  in std_logic;
 			Enable_SubChave			:  in std_logic;
-			--Enable_EntradaAddTxt		:  in std_logic;
-			--Enable_EntradaAddKey		: 	in std_logic;
 		--Seletores
 			Sel_EntradaAddTxt 		: in std_logic_vector(1 downto 0); -- entrada mux add txt
 			Sel_EntradaAddKey 		: in std_logic;						  -- entrada mux add sub chave
@@ -1395,22 +1393,22 @@ end component;
 --	out14Chave_view <= reg14_subchave;
 --	out15Chave_view <= reg15_subchave;
 ----		
---	out0Chave_view <= reg0_key;
---	out1Chave_view <= reg1_key;
---	out2Chave_view <= reg2_key;
---	out3Chave_view <= reg3_key;
---	out4Chave_view <= reg4_key;
---	out5Chave_view <= reg5_key;
---	out6Chave_view <= reg6_key;
---	out7Chave_view <= reg7_key;
---	out8Chave_view <= reg8_key;
---	out9Chave_view <= reg9_key;
---	out10Chave_view <= reg10_key;
---	out11Chave_view <= reg11_key;
---	out12Chave_view <= reg12_key;
---	out13Chave_view <= reg13_key;
---	out14Chave_view <= reg14_key;
---	out15Chave_view <= reg15_key;
+--	out0Add_view <= reg0_key;
+--	out1Add_view <= reg1_key;
+--	out2Add_view <= reg2_key;
+--	out3Add_view <= reg3_key;
+--	out4Add_view <= reg4_key;
+--	out5Add_view <= reg5_key;
+--	out6Add_view <= reg6_key;
+--	out7Add_view <= reg7_key;
+--	out8Add_view <= reg8_key;
+--	out9Add_view <= reg9_key;
+--	out10Add_view <= reg10_key;
+--	out11Add_view <= reg11_key;
+--	out12Add_view <= reg12_key;
+--	out13Add_view <= reg13_key;
+--	out14Add_view <= reg14_key;
+--	out15Add_view <= reg15_key;
 
 --	out0Add_view <= reg0_mix;
 --	out1Add_view <= reg1_mix;
@@ -1445,7 +1443,7 @@ end component;
 --	out13Add_view <= reg13_subchave;
 --	out14Add_view <= reg14_subchave;
 --	out15Add_view <= reg15_subchave;
-
+----
 --	out0Add_view <= reg0_txt;
 --	out1Add_view <= reg1_txt;
 --	out2Add_view <= reg2_txt;

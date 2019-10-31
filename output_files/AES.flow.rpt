@@ -1,5 +1,5 @@
 Flow report for AES
-Tue Oct 29 20:59:04 2019
+Wed Oct 30 21:26:58 2019
 Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
 
 
@@ -40,22 +40,22 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct 29 20:59:04 2019      ;
+; Flow Status                        ; Successful - Wed Oct 30 21:26:58 2019      ;
 ; Quartus II 64-Bit Version          ; 13.0.0 Build 156 04/24/2013 SJ Web Edition ;
 ; Revision Name                      ; AES                                        ;
-; Top-level Entity Name              ; SubChave                                   ;
+; Top-level Entity Name              ; Conecta_topo                               ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C25F324C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 968                                        ;
-;     Total combinational functions  ; 968                                        ;
-;     Dedicated logic registers      ; 0                                          ;
-; Total registers                    ; 0                                          ;
-; Total pins                         ; 260                                        ;
+; Total logic elements               ; 1,617 / 24,624 ( 7 % )                     ;
+;     Total combinational functions  ; 1,478 / 24,624 ( 6 % )                     ;
+;     Dedicated logic registers      ; 656 / 24,624 ( 3 % )                       ;
+; Total registers                    ; 656                                        ;
+; Total pins                         ; 194 / 216 ( 90 % )                         ;
 ; Total virtual pins                 ; 0                                          ;
-; Total memory bits                  ; 0                                          ;
-; Embedded Multiplier 9-bit elements ; 0                                          ;
-; Total PLLs                         ; 0                                          ;
+; Total memory bits                  ; 32,768 / 608,256 ( 5 % )                   ;
+; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                            ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                              ;
 +------------------------------------+--------------------------------------------+
 
 
@@ -64,60 +64,121 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/29/2019 20:54:55 ;
+; Start date & time ; 10/30/2019 21:00:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; AES                 ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                           ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 167304661237443.157239329509416 ; --            ; --          ; --             ;
-; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                              ; --            ; --          ; eda_simulation ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                        ; --            ; SubChave    ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; SubChave    ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; SubChave    ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; SubChave                        ; AES           ; --          ; --             ;
-+-------------------------------------+---------------------------------+---------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                      ;
++-------------------------------------+---------------------------------+---------------+--------------+----------------+
+; Assignment Name                     ; Value                           ; Default Value ; Entity Name  ; Section Id     ;
++-------------------------------------+---------------------------------+---------------+--------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 167304661237443.157248002307784 ; --            ; --           ; --             ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                              ; --            ; --           ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                     ; --            ; --           ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)       ; <None>        ; --           ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                            ; --            ; --           ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                              ; --            ; --           ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                               ; --            ; --           ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                            ; --            ; --           ; --             ;
+; PARTITION_COLOR                     ; 16764057                        ; --            ; Conecta_topo ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING           ; --            ; Conecta_topo ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                          ; --            ; Conecta_topo ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                    ; --            ; --           ; --             ;
+; TOP_LEVEL_ENTITY                    ; Conecta_topo                    ; AES           ; --           ; --             ;
++-------------------------------------+---------------------------------+---------------+--------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4614 MB             ; 00:00:09                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4502 MB             ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4502 MB             ; 00:00:01                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:11                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:19     ; 1.0                     ; 4646 MB             ; 00:00:19                           ;
+; Fitter                    ; 00:00:38     ; 1.0                     ; 4856 MB             ; 00:00:38                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4545 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:07     ; 1.0                     ; 4606 MB             ; 00:00:06                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4515 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4523 MB             ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4523 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4523 MB             ; 00:00:02                           ;
+; Total                     ; 00:01:42     ; --                      ; --                  ; 00:01:38                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------+
-; Flow OS Summary                                                                   ;
-+----------------------+------------------+-----------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
-+----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer   ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
-+----------------------+------------------+-----------+------------+----------------+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; Fitter                    ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; Assembler                 ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; LAPTOP-8MHTIE23  ; Windows 7 ; 6.2        ; x86_64         ;
++---------------------------+------------------+-----------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off AES -c AES
-quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog AES -c AES --vector_source="C:/Users/andre/Desktop/Algoritmo AES em VHDL/subagrvai.vwf" --testbench_file=./simulation/qsim/AES.vt
+quartus_fit --read_settings_files=off --write_settings_files=off AES -c AES
+quartus_asm --read_settings_files=off --write_settings_files=off AES -c AES
+quartus_sta AES -c AES
+quartus_eda --read_settings_files=off --write_settings_files=off AES -c AES
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog AES -c AES --vector_source="C:/Users/andre/Desktop/Algoritmo AES em VHDL/teste_sign.vwf" --testbench_file=./simulation/qsim/AES.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog AES -c AES
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog AES -c AES --vector_source="C:/Users/andre/Desktop/Algoritmo AES em VHDL/teste_sign.vwf" --testbench_file=./simulation/qsim/AES.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog AES -c AES
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog AES -c AES --vector_source="C:/Users/andre/Desktop/Algoritmo AES em VHDL/teste_sign.vwf" --testbench_file=./simulation/qsim/AES.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog AES -c AES
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog AES -c AES --vector_source="C:/Users/andre/Desktop/Algoritmo AES em VHDL/teste_sign.vwf" --testbench_file=./simulation/qsim/AES.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog AES -c AES
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog AES -c AES --vector_source="C:/Users/andre/Desktop/Algoritmo AES em VHDL/teste_sign.vwf" --testbench_file=./simulation/qsim/AES.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog AES -c AES
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog AES -c AES --vector_source="C:/Users/andre/Desktop/Algoritmo AES em VHDL/teste_sign.vwf" --testbench_file=./simulation/qsim/AES.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog AES -c AES
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog AES -c AES --vector_source="C:/Users/andre/Desktop/Algoritmo AES em VHDL/teste_sign.vwf" --testbench_file=./simulation/qsim/AES.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog AES -c AES
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog AES -c AES --vector_source="C:/Users/andre/Desktop/Algoritmo AES em VHDL/teste_sign.vwf" --testbench_file=./simulation/qsim/AES.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog AES -c AES
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog AES -c AES --vector_source="C:/Users/andre/Desktop/Algoritmo AES em VHDL/teste_sign.vwf" --testbench_file=./simulation/qsim/AES.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog AES -c AES
 
 

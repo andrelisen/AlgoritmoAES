@@ -1,0 +1,690 @@
+Simulator report for AES
+Wed Oct 30 17:11:17 2019
+Quartus II 64-Bit Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 210 nodes    ;
+; Simulation Coverage         ;       0.00 % ;
+; Total Number of Transitions ; 0            ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone III  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                                                                                                       ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                                                                                                     ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                                                                                                  ; Timing        ;
+; Start time                                                                                 ; 0 ns                                                                                                                        ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                                                                                         ;               ;
+; Vector input source                                                                        ; C:/Users/andre/Desktop/Códigos em vhdl/Códigos do professor SD/Subtrator_completo (PC + PO)/Subtrator_completo/Waveform.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                                                                                          ; On            ;
+; Check outputs                                                                              ; Off                                                                                                                         ; Off           ;
+; Report simulation coverage                                                                 ; On                                                                                                                          ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                                                                                          ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                                                                                          ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                                                                                          ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                                                                                         ; Off           ;
+; Detect glitches                                                                            ; Off                                                                                                                         ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                                                                                         ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                                                                                         ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                                                                                         ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                                                                                         ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                                                                                          ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                                                                                                  ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                                                                                         ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                                                                                         ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                                                                                                        ; Auto          ;
+; Interconnect Delay Model Type                                                              ; Transport                                                                                                                   ; Transport     ;
+; Cell Delay Model Type                                                                      ; Transport                                                                                                                   ; Transport     ;
++--------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       0.00 % ;
+; Total nodes checked                                 ; 210          ;
+; Total output ports checked                          ; 146          ;
+; Total output ports with complete 1/0-value coverage ; 0            ;
+; Total output ports with no 1/0-value coverage       ; 146          ;
+; Total output ports with no 1-value coverage         ; 146          ;
+; Total output ports with no 0-value coverage         ; 146          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++-------------------------------------------------+
+; Complete 1/0-Value Coverage                     ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                     ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |Conecta_topo|clk                                   ; |Conecta_topo|clk                                   ; out              ;
+; |Conecta_topo|rst                                   ; |Conecta_topo|rst                                   ; out              ;
+; |Conecta_topo|out0Add_top[0]                        ; |Conecta_topo|out0Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[1]                        ; |Conecta_topo|out0Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[2]                        ; |Conecta_topo|out0Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[3]                        ; |Conecta_topo|out0Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[4]                        ; |Conecta_topo|out0Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[5]                        ; |Conecta_topo|out0Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[6]                        ; |Conecta_topo|out0Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[7]                        ; |Conecta_topo|out0Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[0]                        ; |Conecta_topo|out1Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[1]                        ; |Conecta_topo|out1Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[2]                        ; |Conecta_topo|out1Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[3]                        ; |Conecta_topo|out1Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[4]                        ; |Conecta_topo|out1Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[5]                        ; |Conecta_topo|out1Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[6]                        ; |Conecta_topo|out1Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[7]                        ; |Conecta_topo|out1Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[0]                        ; |Conecta_topo|out2Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[1]                        ; |Conecta_topo|out2Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[2]                        ; |Conecta_topo|out2Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[3]                        ; |Conecta_topo|out2Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[4]                        ; |Conecta_topo|out2Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[5]                        ; |Conecta_topo|out2Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[6]                        ; |Conecta_topo|out2Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[7]                        ; |Conecta_topo|out2Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[0]                        ; |Conecta_topo|out3Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[1]                        ; |Conecta_topo|out3Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[2]                        ; |Conecta_topo|out3Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[3]                        ; |Conecta_topo|out3Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[4]                        ; |Conecta_topo|out3Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[5]                        ; |Conecta_topo|out3Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[6]                        ; |Conecta_topo|out3Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[7]                        ; |Conecta_topo|out3Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[0]                        ; |Conecta_topo|out4Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[1]                        ; |Conecta_topo|out4Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[2]                        ; |Conecta_topo|out4Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[3]                        ; |Conecta_topo|out4Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[4]                        ; |Conecta_topo|out4Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[5]                        ; |Conecta_topo|out4Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[6]                        ; |Conecta_topo|out4Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[7]                        ; |Conecta_topo|out4Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[0]                        ; |Conecta_topo|out5Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[1]                        ; |Conecta_topo|out5Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[2]                        ; |Conecta_topo|out5Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[3]                        ; |Conecta_topo|out5Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[4]                        ; |Conecta_topo|out5Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[5]                        ; |Conecta_topo|out5Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[6]                        ; |Conecta_topo|out5Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[7]                        ; |Conecta_topo|out5Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[0]                        ; |Conecta_topo|out6Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[1]                        ; |Conecta_topo|out6Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[2]                        ; |Conecta_topo|out6Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[3]                        ; |Conecta_topo|out6Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[4]                        ; |Conecta_topo|out6Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[5]                        ; |Conecta_topo|out6Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[6]                        ; |Conecta_topo|out6Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[7]                        ; |Conecta_topo|out6Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[0]                        ; |Conecta_topo|out7Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[1]                        ; |Conecta_topo|out7Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[2]                        ; |Conecta_topo|out7Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[3]                        ; |Conecta_topo|out7Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[4]                        ; |Conecta_topo|out7Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[5]                        ; |Conecta_topo|out7Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[6]                        ; |Conecta_topo|out7Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[7]                        ; |Conecta_topo|out7Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[0]                        ; |Conecta_topo|out8Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[1]                        ; |Conecta_topo|out8Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[2]                        ; |Conecta_topo|out8Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[3]                        ; |Conecta_topo|out8Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[4]                        ; |Conecta_topo|out8Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[5]                        ; |Conecta_topo|out8Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[6]                        ; |Conecta_topo|out8Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[7]                        ; |Conecta_topo|out8Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[0]                        ; |Conecta_topo|out9Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[1]                        ; |Conecta_topo|out9Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[2]                        ; |Conecta_topo|out9Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[3]                        ; |Conecta_topo|out9Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[4]                        ; |Conecta_topo|out9Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[5]                        ; |Conecta_topo|out9Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[6]                        ; |Conecta_topo|out9Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[7]                        ; |Conecta_topo|out9Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out10Add_top[0]                       ; |Conecta_topo|out10Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[1]                       ; |Conecta_topo|out10Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[2]                       ; |Conecta_topo|out10Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[3]                       ; |Conecta_topo|out10Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[4]                       ; |Conecta_topo|out10Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[5]                       ; |Conecta_topo|out10Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[6]                       ; |Conecta_topo|out10Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[7]                       ; |Conecta_topo|out10Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[0]                       ; |Conecta_topo|out11Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[1]                       ; |Conecta_topo|out11Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[2]                       ; |Conecta_topo|out11Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[3]                       ; |Conecta_topo|out11Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[4]                       ; |Conecta_topo|out11Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[5]                       ; |Conecta_topo|out11Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[6]                       ; |Conecta_topo|out11Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[7]                       ; |Conecta_topo|out11Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[0]                       ; |Conecta_topo|out12Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[1]                       ; |Conecta_topo|out12Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[2]                       ; |Conecta_topo|out12Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[3]                       ; |Conecta_topo|out12Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[4]                       ; |Conecta_topo|out12Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[5]                       ; |Conecta_topo|out12Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[6]                       ; |Conecta_topo|out12Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[7]                       ; |Conecta_topo|out12Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[0]                       ; |Conecta_topo|out13Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[1]                       ; |Conecta_topo|out13Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[2]                       ; |Conecta_topo|out13Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[3]                       ; |Conecta_topo|out13Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[4]                       ; |Conecta_topo|out13Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[5]                       ; |Conecta_topo|out13Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[6]                       ; |Conecta_topo|out13Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[7]                       ; |Conecta_topo|out13Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[0]                       ; |Conecta_topo|out14Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[1]                       ; |Conecta_topo|out14Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[2]                       ; |Conecta_topo|out14Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[3]                       ; |Conecta_topo|out14Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[4]                       ; |Conecta_topo|out14Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[5]                       ; |Conecta_topo|out14Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[6]                       ; |Conecta_topo|out14Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[7]                       ; |Conecta_topo|out14Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[0]                       ; |Conecta_topo|out15Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[1]                       ; |Conecta_topo|out15Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[2]                       ; |Conecta_topo|out15Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[3]                       ; |Conecta_topo|out15Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[4]                       ; |Conecta_topo|out15Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[5]                       ; |Conecta_topo|out15Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[6]                       ; |Conecta_topo|out15Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[7]                       ; |Conecta_topo|out15Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|controle_AES:PC|state.state1          ; |Conecta_topo|controle_AES:PC|state.state1          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state.state2          ; |Conecta_topo|controle_AES:PC|state.state2          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state.state3          ; |Conecta_topo|controle_AES:PC|state.state3          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state.state4          ; |Conecta_topo|controle_AES:PC|state.state4          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state.state5          ; |Conecta_topo|controle_AES:PC|state.state5          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state.state6          ; |Conecta_topo|controle_AES:PC|state.state6          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state~0               ; |Conecta_topo|controle_AES:PC|state~0               ; out0             ;
+; |Conecta_topo|controle_AES:PC|state~1               ; |Conecta_topo|controle_AES:PC|state~1               ; out0             ;
+; |Conecta_topo|controle_AES:PC|Enable_registradoresA ; |Conecta_topo|controle_AES:PC|Enable_registradoresA ; out0             ;
+; |Conecta_topo|controle_AES:PC|Enable_registradoresB ; |Conecta_topo|controle_AES:PC|Enable_registradoresB ; out0             ;
+; |Conecta_topo|controle_AES:PC|Enable_registradoresC ; |Conecta_topo|controle_AES:PC|Enable_registradoresC ; out0             ;
+; |Conecta_topo|controle_AES:PC|Enable_registradoresD ; |Conecta_topo|controle_AES:PC|Enable_registradoresD ; out0             ;
+; |Conecta_topo|controle_AES:PC|state.state6~0        ; |Conecta_topo|controle_AES:PC|state.state6~0        ; out0             ;
+; |Conecta_topo|controle_AES:PC|Enable_Add            ; |Conecta_topo|controle_AES:PC|Enable_Add            ; out0             ;
+; |Conecta_topo|controle_AES:PC|state~5               ; |Conecta_topo|controle_AES:PC|state~5               ; out0             ;
+; |Conecta_topo|controle_AES:PC|state~9               ; |Conecta_topo|controle_AES:PC|state~9               ; out0             ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                     ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; Node Name                                           ; Output Port Name                                    ; Output Port Type ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+; |Conecta_topo|clk                                   ; |Conecta_topo|clk                                   ; out              ;
+; |Conecta_topo|rst                                   ; |Conecta_topo|rst                                   ; out              ;
+; |Conecta_topo|out0Add_top[0]                        ; |Conecta_topo|out0Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[1]                        ; |Conecta_topo|out0Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[2]                        ; |Conecta_topo|out0Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[3]                        ; |Conecta_topo|out0Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[4]                        ; |Conecta_topo|out0Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[5]                        ; |Conecta_topo|out0Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[6]                        ; |Conecta_topo|out0Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out0Add_top[7]                        ; |Conecta_topo|out0Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[0]                        ; |Conecta_topo|out1Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[1]                        ; |Conecta_topo|out1Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[2]                        ; |Conecta_topo|out1Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[3]                        ; |Conecta_topo|out1Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[4]                        ; |Conecta_topo|out1Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[5]                        ; |Conecta_topo|out1Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[6]                        ; |Conecta_topo|out1Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out1Add_top[7]                        ; |Conecta_topo|out1Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[0]                        ; |Conecta_topo|out2Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[1]                        ; |Conecta_topo|out2Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[2]                        ; |Conecta_topo|out2Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[3]                        ; |Conecta_topo|out2Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[4]                        ; |Conecta_topo|out2Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[5]                        ; |Conecta_topo|out2Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[6]                        ; |Conecta_topo|out2Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out2Add_top[7]                        ; |Conecta_topo|out2Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[0]                        ; |Conecta_topo|out3Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[1]                        ; |Conecta_topo|out3Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[2]                        ; |Conecta_topo|out3Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[3]                        ; |Conecta_topo|out3Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[4]                        ; |Conecta_topo|out3Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[5]                        ; |Conecta_topo|out3Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[6]                        ; |Conecta_topo|out3Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out3Add_top[7]                        ; |Conecta_topo|out3Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[0]                        ; |Conecta_topo|out4Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[1]                        ; |Conecta_topo|out4Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[2]                        ; |Conecta_topo|out4Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[3]                        ; |Conecta_topo|out4Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[4]                        ; |Conecta_topo|out4Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[5]                        ; |Conecta_topo|out4Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[6]                        ; |Conecta_topo|out4Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out4Add_top[7]                        ; |Conecta_topo|out4Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[0]                        ; |Conecta_topo|out5Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[1]                        ; |Conecta_topo|out5Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[2]                        ; |Conecta_topo|out5Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[3]                        ; |Conecta_topo|out5Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[4]                        ; |Conecta_topo|out5Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[5]                        ; |Conecta_topo|out5Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[6]                        ; |Conecta_topo|out5Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out5Add_top[7]                        ; |Conecta_topo|out5Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[0]                        ; |Conecta_topo|out6Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[1]                        ; |Conecta_topo|out6Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[2]                        ; |Conecta_topo|out6Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[3]                        ; |Conecta_topo|out6Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[4]                        ; |Conecta_topo|out6Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[5]                        ; |Conecta_topo|out6Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[6]                        ; |Conecta_topo|out6Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out6Add_top[7]                        ; |Conecta_topo|out6Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[0]                        ; |Conecta_topo|out7Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[1]                        ; |Conecta_topo|out7Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[2]                        ; |Conecta_topo|out7Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[3]                        ; |Conecta_topo|out7Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[4]                        ; |Conecta_topo|out7Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[5]                        ; |Conecta_topo|out7Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[6]                        ; |Conecta_topo|out7Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out7Add_top[7]                        ; |Conecta_topo|out7Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[0]                        ; |Conecta_topo|out8Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[1]                        ; |Conecta_topo|out8Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[2]                        ; |Conecta_topo|out8Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[3]                        ; |Conecta_topo|out8Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[4]                        ; |Conecta_topo|out8Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[5]                        ; |Conecta_topo|out8Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[6]                        ; |Conecta_topo|out8Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out8Add_top[7]                        ; |Conecta_topo|out8Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[0]                        ; |Conecta_topo|out9Add_top[0]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[1]                        ; |Conecta_topo|out9Add_top[1]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[2]                        ; |Conecta_topo|out9Add_top[2]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[3]                        ; |Conecta_topo|out9Add_top[3]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[4]                        ; |Conecta_topo|out9Add_top[4]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[5]                        ; |Conecta_topo|out9Add_top[5]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[6]                        ; |Conecta_topo|out9Add_top[6]                        ; pin_out          ;
+; |Conecta_topo|out9Add_top[7]                        ; |Conecta_topo|out9Add_top[7]                        ; pin_out          ;
+; |Conecta_topo|out10Add_top[0]                       ; |Conecta_topo|out10Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[1]                       ; |Conecta_topo|out10Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[2]                       ; |Conecta_topo|out10Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[3]                       ; |Conecta_topo|out10Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[4]                       ; |Conecta_topo|out10Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[5]                       ; |Conecta_topo|out10Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[6]                       ; |Conecta_topo|out10Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out10Add_top[7]                       ; |Conecta_topo|out10Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[0]                       ; |Conecta_topo|out11Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[1]                       ; |Conecta_topo|out11Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[2]                       ; |Conecta_topo|out11Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[3]                       ; |Conecta_topo|out11Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[4]                       ; |Conecta_topo|out11Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[5]                       ; |Conecta_topo|out11Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[6]                       ; |Conecta_topo|out11Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out11Add_top[7]                       ; |Conecta_topo|out11Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[0]                       ; |Conecta_topo|out12Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[1]                       ; |Conecta_topo|out12Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[2]                       ; |Conecta_topo|out12Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[3]                       ; |Conecta_topo|out12Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[4]                       ; |Conecta_topo|out12Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[5]                       ; |Conecta_topo|out12Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[6]                       ; |Conecta_topo|out12Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out12Add_top[7]                       ; |Conecta_topo|out12Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[0]                       ; |Conecta_topo|out13Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[1]                       ; |Conecta_topo|out13Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[2]                       ; |Conecta_topo|out13Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[3]                       ; |Conecta_topo|out13Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[4]                       ; |Conecta_topo|out13Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[5]                       ; |Conecta_topo|out13Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[6]                       ; |Conecta_topo|out13Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out13Add_top[7]                       ; |Conecta_topo|out13Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[0]                       ; |Conecta_topo|out14Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[1]                       ; |Conecta_topo|out14Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[2]                       ; |Conecta_topo|out14Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[3]                       ; |Conecta_topo|out14Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[4]                       ; |Conecta_topo|out14Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[5]                       ; |Conecta_topo|out14Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[6]                       ; |Conecta_topo|out14Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out14Add_top[7]                       ; |Conecta_topo|out14Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[0]                       ; |Conecta_topo|out15Add_top[0]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[1]                       ; |Conecta_topo|out15Add_top[1]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[2]                       ; |Conecta_topo|out15Add_top[2]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[3]                       ; |Conecta_topo|out15Add_top[3]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[4]                       ; |Conecta_topo|out15Add_top[4]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[5]                       ; |Conecta_topo|out15Add_top[5]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[6]                       ; |Conecta_topo|out15Add_top[6]                       ; pin_out          ;
+; |Conecta_topo|out15Add_top[7]                       ; |Conecta_topo|out15Add_top[7]                       ; pin_out          ;
+; |Conecta_topo|controle_AES:PC|state.state1          ; |Conecta_topo|controle_AES:PC|state.state1          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state.state2          ; |Conecta_topo|controle_AES:PC|state.state2          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state.state3          ; |Conecta_topo|controle_AES:PC|state.state3          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state.state4          ; |Conecta_topo|controle_AES:PC|state.state4          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state.state5          ; |Conecta_topo|controle_AES:PC|state.state5          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state.state6          ; |Conecta_topo|controle_AES:PC|state.state6          ; regout           ;
+; |Conecta_topo|controle_AES:PC|state~0               ; |Conecta_topo|controle_AES:PC|state~0               ; out0             ;
+; |Conecta_topo|controle_AES:PC|state~1               ; |Conecta_topo|controle_AES:PC|state~1               ; out0             ;
+; |Conecta_topo|controle_AES:PC|Enable_registradoresA ; |Conecta_topo|controle_AES:PC|Enable_registradoresA ; out0             ;
+; |Conecta_topo|controle_AES:PC|Enable_registradoresB ; |Conecta_topo|controle_AES:PC|Enable_registradoresB ; out0             ;
+; |Conecta_topo|controle_AES:PC|Enable_registradoresC ; |Conecta_topo|controle_AES:PC|Enable_registradoresC ; out0             ;
+; |Conecta_topo|controle_AES:PC|Enable_registradoresD ; |Conecta_topo|controle_AES:PC|Enable_registradoresD ; out0             ;
+; |Conecta_topo|controle_AES:PC|state.state6~0        ; |Conecta_topo|controle_AES:PC|state.state6~0        ; out0             ;
+; |Conecta_topo|controle_AES:PC|Enable_Add            ; |Conecta_topo|controle_AES:PC|Enable_Add            ; out0             ;
+; |Conecta_topo|controle_AES:PC|state~5               ; |Conecta_topo|controle_AES:PC|state~5               ; out0             ;
+; |Conecta_topo|controle_AES:PC|state~9               ; |Conecta_topo|controle_AES:PC|state~9               ; out0             ;
++-----------------------------------------------------+-----------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 13.0.0 Build 156 04/24/2013 SJ Web Edition
+    Info: Processing started: Wed Oct 30 17:11:17 2019
+Info: Command: quartus_sim --simulation_results_format=VWF AES -c AES
+Info (324025): Using vector source file "C:/Users/andre/Desktop/Códigos em vhdl/Códigos do professor SD/Subtrator_completo (PC + PO)/Subtrator_completo/Waveform.vwf"
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "a_top[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "b_top[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "c_top[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "clk_top" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "ctrl_mux1_view" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "en_inputs_view" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "ctrl_mux2_view" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "en_regAdder_view" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outAdder_view[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outInv_view[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux1_view[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outMux2_view[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegA_view[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegAdder_view[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[15]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[14]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[13]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[12]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[11]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[10]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[9]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[8]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[7]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[6]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[5]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[4]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[3]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "outRegB_view[0]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "reset_top" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "state_view[2]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "state_view[1]" in design.
+Warning (328013): Ignored node in vector source file. Can't find corresponding node name "state_view[0]" in design.
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada0_top[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada0_top[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada0_top[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada0_top[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada0_top[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada0_top[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada0_top[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada0_top[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada1_top[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada1_top[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada1_top[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada1_top[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada1_top[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada1_top[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada1_top[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada1_top[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada2_top[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada2_top[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada2_top[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada2_top[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada2_top[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada2_top[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada2_top[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada2_top[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada3_top[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada3_top[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada3_top[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada3_top[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada3_top[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada3_top[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada3_top[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada3_top[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada4_top[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada4_top[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada4_top[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada4_top[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada4_top[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada4_top[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada4_top[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada4_top[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada5_top[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada5_top[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada5_top[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada5_top[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada5_top[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada5_top[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada5_top[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada5_top[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada6_top[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada6_top[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada6_top[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada6_top[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada6_top[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada6_top[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada6_top[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada6_top[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada7_top[0]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada7_top[1]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada7_top[2]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada7_top[3]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada7_top[4]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada7_top[5]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada7_top[6]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|entrada7_top[7]"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|clk"
+Warning (328012): Can't find signal in vector source file for input pin "|Conecta_topo|rst"
+Info (310003): Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info (310004): Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info (310002): Simulation partitioned into 1 sub-simulations
+Info (328053): Simulation coverage is       0.00 %
+Info (328052): Number of transitions in simulation is 0
+Info (324045): Vector file AES.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 235 warnings
+    Info: Peak virtual memory: 4445 megabytes
+    Info: Processing ended: Wed Oct 30 17:11:17 2019
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
+
+

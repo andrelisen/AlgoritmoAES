@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Oct 29 07:55:58 2019
+Fitter Status : Successful - Wed Oct 30 21:01:22 2019
 Quartus II 64-Bit Version : 13.0.0 Build 156 04/24/2013 SJ Web Edition
 Revision Name : AES
-Top-level Entity Name : AES
+Top-level Entity Name : Conecta_topo
 Family : Cyclone III
 Device : EP3C25F324C6
 Timing Models : Final
-Total logic elements : 1,642 / 24,624 ( 7 % )
-    Total combinational functions : 1,606 / 24,624 ( 7 % )
-    Dedicated logic registers : 640 / 24,624 ( 3 % )
-Total registers : 640
-Total pins : 206 / 216 ( 95 % )
+Total logic elements : 1,617 / 24,624 ( 7 % )
+    Total combinational functions : 1,478 / 24,624 ( 6 % )
+    Dedicated logic registers : 656 / 24,624 ( 3 % )
+Total registers : 656
+Total pins : 194 / 216 ( 90 % )
 Total virtual pins : 0
 Total memory bits : 32,768 / 608,256 ( 5 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
